@@ -1,0 +1,19 @@
+.form-add-film {
+  .MuiFormControl-root {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  img {
+    width: 25%;
+  }
+
+  .add-film-button {
+    display: flex;
+    justify-content: center;
+
+    button {
+      margin: 1rem;
+    }
+  }
+}
