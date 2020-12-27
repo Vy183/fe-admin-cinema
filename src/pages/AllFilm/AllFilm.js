@@ -11,7 +11,7 @@ class AllFilm extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     axios
-      .get("/admin-page")
+      .get("/")
       .then((res) => {
         // console.log(res.data);
         this.setState({ films: res.data.films }, () => {
@@ -28,7 +28,7 @@ class AllFilm extends Component {
       <Grid
         container
         spacing={1}
-        style={{ justifyContent: "space-around", marginTop: "24px" }}
+        style={{ justifyContent: "space-evenly", margin: "24px 0px 0px 100px" }}
       >
         {this.state.films.map((film) => {
           return (
@@ -45,7 +45,7 @@ class AllFilm extends Component {
                 EN_name={film.EN_name}
                 VN_name={film.VN_name}
                 urlImg={film.urlImg}
-                id_phim={film.id_phim}
+                id_phim={film._id}
               />
             </Grid>
           );

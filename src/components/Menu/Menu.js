@@ -54,7 +54,6 @@ export default function NestedList() {
       </ListItem>
       <Collapse in={openFilm} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-
           <Link to="/add-film" className={classes.link}>
             <ListItem button className={classes.nested}>
               <ListItemIcon>
@@ -86,7 +85,6 @@ export default function NestedList() {
               <ListItemText primary="Tất cả phim" />
             </ListItem>
           </Link>
-
         </List>
       </Collapse>
 
@@ -94,17 +92,28 @@ export default function NestedList() {
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary="Inbox" />
+        <ListItemText primary="Nhà sản xuất" />
         {openAcc ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={openAcc} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Starred" />
-          </ListItem>
+          <Link to="/add-producer">
+            <ListItem button className={classes.nested}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <ListItemText primary="Thêm nhà sản xuất" />
+            </ListItem>
+          </Link>
+          
+          <Link to="/all-producer">
+            <ListItem button className={classes.nested}>
+              <ListItemIcon>
+                <StarBorder />
+              </ListItemIcon>
+              <ListItemText primary="Tất cả nhà sản xuất" />
+            </ListItem>
+          </Link>
         </List>
       </Collapse>
     </List>
