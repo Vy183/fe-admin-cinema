@@ -8,6 +8,7 @@ import AllFilm from "./pages/AllFilm/AllFilm";
 import AddFilm from "./pages/AddFilm/AddFilm";
 import EditFilm from "./pages/EditFilm/EditFilm";
 import AddProducer from "./pages/AddProducer/AddProducer";
+import TabsAdd from './components/TabsAdd/TabsAdd';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           <Route path="/add-producer" component={AddProducer} />
         </Switch>
       </Container>
+
+      <TabsAdd/>
     </div>
   );
 }

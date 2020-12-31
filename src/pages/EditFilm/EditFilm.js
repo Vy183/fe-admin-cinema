@@ -192,14 +192,14 @@ class EditFilm extends Component {
               onChange={this.changeInputHandler}
             />
 
-            {/* <TextField
+            <TextField
               id="producer"
               name="producer"
               label="Nhà sản xuất"
               variant="outlined"
               value={this.state.producer}
               onChange={this.changeInputHandler}
-            /> */}
+            />
 
             <TextField
               id="country"
